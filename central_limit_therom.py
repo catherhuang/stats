@@ -59,5 +59,14 @@ print (median(num_lst))
 print (mode(num_lst))
 
 
+def weighted_mean(x, w): 
+    divisor=0
+    divident= 0
+    for i in range(0, len(x)): 
+            divident = divident + (x[i]*w[i])
+            divisor = divisor+w[i]
+    wm =round((divident / divisor), 1) 
+    return wm
 
+print (weighted_mean(x, w))
 
