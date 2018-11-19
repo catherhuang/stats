@@ -54,3 +54,10 @@ def mode(nums):
             mode = i
     return mode
 
+print (mean(num_lst))
+print (median(num_lst))
+print (mode(num_lst))
+
+
+
+
