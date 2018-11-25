@@ -124,3 +124,23 @@ for i in range(3,7):
     b += bi_dist(i, n, p)   
 print("%.3f" %b)
 
+#least square regression line 
+x, y =[], []
+for i in range ( 5): 
+    student = [int(i) for i in input().split()]
+    x=x+[student[0]]
+    y=y+[student[1]]
+
+mean_x=sum(x)/len(x)
+mean_y=sum(y)/len(y)
+
+x_squared=sum([x[i]**2 for i in range(5)])
+xy = sum([x[i]*y[i] for i in range(5)])
+b=(len(x)*xy - sum(x)*sum(y))/(len(x)*x_squared - sum(x)**2) 
+a=mean_y-b*mean_x
+ans=a+b*80
+print(round(ans, 3))
+
+
+
+
