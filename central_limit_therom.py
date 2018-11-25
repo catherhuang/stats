@@ -91,7 +91,26 @@ else:
 print(int(median(L)))
 print(int(median(arr)))
 print(int(median(U)))
-    
+
+
+
+n_lst = list(map(int, input().split()))
+
+def stdv(lst): 
+    size=len(lst)
+    if size <1: 
+        stdv=0
+    else: 
+        mean=sum(lst)/size
+        diff_sum=0
+        for i in lst: 
+            diff= (i-mean)**2
+            diff_sum = diff_sum+diff
+        diff_avg=diff_sum/size
+        stdv=round((diff_avg**.5), 1) 
+    return print(stdv)
+
+stdv(n_lst)
 
 
 
